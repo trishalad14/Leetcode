@@ -6,9 +6,10 @@ class TreeNode(object):
         self.right = right
 class Solution(object):
     def maxDepth(self, root):
+        
         if root is None:
             return 0
-        l=self.maxDepth(root.left)
-        r=self.maxDepth(root.right)
-        return 1+max(l,r)
-        
+        left_h=self.maxDepth(root.left)
+        right_h=self.maxDepth(root.right)
+        return 1+max(left_h,right_h)
+      
